@@ -13,6 +13,7 @@ Ici vous décrivez les fonctionnalités souhaitées et celles effectivement mise
 
 ### Cas d'usage
 
+<div hidden>
 ```plantuml
 @startuml
 left to right direction
@@ -44,6 +45,7 @@ u --> CG
 u --> D
 @enduml
 ```
+</div>
 
 ![Diagramme 1](./images/image1.svg)
 
