@@ -1,6 +1,6 @@
 ---
 title: Projet React, Express and SQLite3
-authors : Steve Lening (leningtz)
+authors : Steve Lening
 --- 
 
 ## Cahier des charges
