@@ -13,35 +13,272 @@ Ici vous décrivez les fonctionnalités souhaitées et celles effectivement mise
 
 ### Cas d'usage
 
-![Diagramme 1](./images/image1.svg)
+```plantuml
+@startuml
+left to right direction
+actor "Visitor" as v
+actor "Registered User" as u
+actor "Admin" as a
+u <-- a
+rectangle Application {
+  usecase "Register" as R
+  usecase "Connect" as C
+  usecase "Create a Group" as CG
+  usecase "Add user in one of my groups" as AU
+  usecase "Delete user in one of my groups" as DU
+  usecase "Update password" as UP
+  usecase "Delete a Group" as DG
+  usecase "Change role" as CR
+  usecase "Delete a user" as DAU
+  usecase "Disconnect" as D
+}
+a --> DG
+a --> CR
+a --> DAU
+v --> R
+u --> C
+u --> AU
+u --> DU
+u --> UP
+u --> CG
+u --> D
+@enduml
+```
 
 ### Maquettes
 
 #### 1 - Interface de connexion et de création de compte
 
-![Diagramme 2](./images/image2.svg)
+```plantuml
+@startsalt
+<style>
+button {
+  TextAlignement right
+}
+</style>
+{
+{^Se Connecter
+{Email | "Email"}
+{Mot de passe | "****      "}
+[OK ]
+}
+{^"Pas encore de compte Enregistrez vous"
+{Nom | "Nom "}
+{Email | "Email"}
+{Mot de passe | "****      "}
+{Confirmer votre Mot de passe | "****      "}
+[OK ]
+}
+}
+@endsalt
+```
 
 #### 2 - Interface listant les groupes
 
-![Diagramme 3](./images/image3.svg)
+```plantuml
+@startsalt
+<style>
+header {
+  TextAlignement right
+  BackGroundColor gray
+  FontColor white
+}
+</style>
+header { Utilisateur | Alice@aol.fr | [Se déconnecter] }
+{
+{^
+Changer votre mot de passe | "Nouveau mot de passe" | [Modifier]
+}
+{
+{^Mes groupes
+**Ceux dont je suis membre**
+* Ensimag
+* Grenoble INP
+* Club gaming
+----
+**Ceux que j'administre**
+* Club Gaming
+* Running
+"<i>nom du nouveau groupe" 
+ [Créer]
+}
+}
+}
+@endsalt
+```
 
 #### 3 - Interface d'administration d'un groupe
 
-![Diagramme 4](./images/image4.svg)
+```plantuml
+@startsalt
+<style>
+header {
+  TextAlignement right
+  BackGroundColor gray
+  FontColor white
+}
+</style>
+header { Utilisateur | Alice@aol.fr | [Se déconnecter] }
+{
+{^
+Changer votre mot de passe | "Nouveau mot de passe" | [Modifier]
+}
+{
+{^Mes groupes
+**Ceux dont je suis membre**
+* Ensimag
+* Grenoble INP
+* Club gaming
+----
+**Ceux que j'administre**
+* <b>Club Gaming
+* Running
+"<i>nom du nouveau groupe" 
+ [Créer]
+}|
+{^"Administration <b>"Club Gaming""
+{
+Ajouter un membre
+^Steve@gmail.com^ | [Ajouter ]
+----|----
+**Liste des membres**
+----|----
+Jihad@gmail.fr | [Supprimer ]
+steve@gmail.com | [Supprimer ]
+john@gmail.com | [Supprimer ]
+mathieu@gmail.fr | [Supprimer ]
+}
+}
+}
+}
+@endsalt
+```
 
 #### 4 - Interface d'envoi de messages
 
-![Diagramme 5](./images/image5.svg)
+```plantuml
+@startsalt
+<style>
+header {
+  TextAlignement right
+  BackGroundColor gray
+  FontColor white
+}
+</style>
+header { Utilisateur | Alice@aol.fr | [Se déconnecter] }
+{
+{^
+Changer votre mot de passe | "Nouveau mot de passe" | [Modifier]
+}
+{
+{^Mes groupes
+**Ceux dont je suis membre**
+* Ensimag
+* Grenoble INP
+* <b>Club gaming
+----
+**Ceux que j'administre**
+* Club Gaming
+* Running
+"<i>nom du nouveau groupe" 
+ [Créer]
+}|
+{^"Discussion sur le groupe <b>Club Gaming"
+{SI
+  [Salut , ca va? ] | Charlie
+  [Super, et toi?] | Asimov
+  [On se fait un truc] | Asimov
+  [Une idée? ] | Charlie
+  . | [Hello, oui]
+  ----|----
+}
+{+ "Une partie de LOL après?" | [Envoyer ] }
+}
+}
+}
+@endsalt
+```
 
 #### 5 - Interface d'administration de l'appli
 
-![Diagramme 6](./images/image6.svg)
+```plantuml
+@startsalt
+<style>
+header {
+  TextAlignement right
+  BackGroundColor gray
+  FontColor white
+}
+</style>
+header { Administrateur | Admin@admin.fr | [Se déconnecter] }
+{
+{^
+Changer votre mot de passe | "Nouveau mot de passe" | [Modifier]
+}
+{
+{^Mes groupes
+**Ceux dont je suis membre**
+* Ensimag
+* Grenoble INP
+* Club gaming
+----
+**Ceux que j'administre**
+* Club Gaming
+* Running
+"<i>nom du nouveau groupe" 
+ [Créer]
+}
+}
+{^
+Administration de l'Appli
+----|----
+  {
+    {^Changer le role
+    {
+      ^Steve@gmail.com^
+      () Adminstrateur | (X) Utilisateur
+      [Editer ]
+    }
+    } |
+    {^Supprimer un utilisateur
+    {
+      ^Steve@gmail.com    ^
+      .
+      [Supprimer ]
+    }
+    } |
+    {^Supprimer un groupe
+    {
+      ^Groupe a        ^
+      .
+      [Supprimer ]
+    }
+    }
+  }
+}
+}
+@endsalt
+```
 
 #### 6 - Le bouton déconnexion
 
 Il apparait en haut a droite de l'interface lorsque l'utilisateur est connecté. Si on clique dessus, on retourne a l'interface de connexion.
 
-![Diagramme 7](./images/image7.svg)
+```plantuml
+@startsalt
+<style>
+header {
+  TextAlignement right
+  BackGroundColor gray
+  FontColor white
+}
+</style>
+header { Utilisateur | Alice@aol.fr | [Se déconnecter] }
+{
+  {}
+}
+@endsalt
+```
 
 ### Captures d'écran
 
@@ -92,7 +329,28 @@ Ce dossier contient les fichiers de test cypress du fontend.
 
 #### Schéma de votre base de donnée
 
-![Diagramme 8](./images/image8.svg)
+```plantuml
+class User{
+  name
+  email
+  passhash
+  isAdmin : boolean
+}
+
+class Message{
+  content
+}
+
+class Group{
+  name
+}
+
+User "1" -- "n" Message : posts
+Group "1" -- "n" Message : contains
+
+User "n" -- "n"  Group : is member 
+User "1" -- "n"  Group : create and own
+```
 
 #### Architecture de votre code
 
