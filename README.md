@@ -1,5 +1,5 @@
 ---
-title: Projet React, Express and SQLite3
+title: Projet React, Express et SQLite3
 authors : Steve Lening
 --- 
 
