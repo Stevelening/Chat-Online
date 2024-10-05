@@ -1,11 +1,7 @@
 ---
 title: Projet React, Express and SQLite3
-authors :  
-- Jihad Hammoud (hammouji)
-- Steve Lening (leningtz)
+authors : Steve Lening (leningtz)
 --- 
-
-![Appercu de l'application](./images/image4.png "Appercu de l'application")
 
 ## Cahier des charges
 
@@ -43,7 +39,7 @@ Il apparait en haut a droite de l'interface lorsque l'utilisateur est connecté.
 
 ![Diagramme 7](./images/image7.svg)
 
-### Captures d'écran
+### Captures d'écran des résultats obtenus
 
 #### 1 - Interface de connexion et de création de compte
 ![image1](./images/image1.png)
