@@ -1,9 +1,11 @@
 ---
-title: Projet React 
-author:  
+title: Projet React, Express and SQLite3
+authors :  
 - Jihad Hammoud (hammouji)
 - Steve Lening (leningtz)
 --- 
+
+![Appercu de l'application](./image4.png "Appercu de l'application")
 
 ## Cahier des charges
 
