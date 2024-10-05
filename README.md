@@ -5,7 +5,7 @@ authors :
 - Steve Lening (leningtz)
 --- 
 
-![Appercu de l'application](./image4.png "Appercu de l'application")
+![Appercu de l'application](./images/image4.png "Appercu de l'application")
 
 ## Cahier des charges
 
@@ -283,19 +283,19 @@ header { Utilisateur | Alice@aol.fr | [Se déconnecter] }
 ### Captures d'écran
 
 #### 1 - Interface de connexion et de création de compte
-![image1](./image1.png)
+![image1](./images/image1.png)
 
 #### 2 - Interface listant les groupes
-![image2](./image2.png)
+![image2](./images/image2.png)
 
 #### 3 - Interface d'administration d'un groupe
-![image3](./image3.png)
+![image3](./images/image3.png)
 
 #### 4 - Interface d'envoi de messages
-![image4](./image4.png)
+![image4](./images/image4.png)
 
 #### 5 - Interface d'administration de l'appli
-![image5](./image5.png)
+![image5](./images/image5.png)
 
 #### 6 - Le bouton déconnexion
 On peut l'appercevoir sur l'image précédente en haut a droite.
@@ -392,7 +392,7 @@ Pour chaque table de la base de données, nous avons testé chacune des routes d
 
 Les tests unitaires que nous avons écrit couvrent environ 82% du backend comme le montre cette capture d'écran des tests exécutés sur le backend :
 
-![test1](./test1.png)
+![test1](./images/images/test1.png)
 
 ### Frontend
 
