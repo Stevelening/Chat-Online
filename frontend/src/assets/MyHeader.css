@@ -1,0 +1,10 @@
+.deconnexion {
+    color:white; 
+    background-color:#213547;
+    display: inline;
+    cursor: pointer;
+}
+
+.deconnexion:hover {
+    background-color: #747bff; 
+}

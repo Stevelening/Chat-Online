@@ -1,0 +1,25 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+fieldset {
+  border: 1px solid   #213547;
+  width: 40%;
+  padding: 20px;
+}
+
+.card, .card1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.card1 {
+  text-align: center;
+}
+
+li:hover{
+  font-weight: bold;
+  cursor: pointer;
+}
