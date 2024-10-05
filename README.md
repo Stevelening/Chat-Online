@@ -392,7 +392,7 @@ Pour chaque table de la base de données, nous avons testé chacune des routes d
 
 Les tests unitaires que nous avons écrit couvrent environ 82% du backend comme le montre cette capture d'écran des tests exécutés sur le backend :
 
-![test1](./images/images/test1.png)
+![test1](./images/test1.png)
 
 ### Frontend
 
