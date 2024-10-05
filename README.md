@@ -45,6 +45,8 @@ u --> D
 @enduml
 ```
 
+![Diagramme 1](./images/image1.svg)
+
 ### Maquettes
 
 #### 1 - Interface de connexion et de création de compte
@@ -469,7 +471,8 @@ Les versions déployées contiennent exactement les mêmes fonctionnalités que 
 
 ## Requête pour accéder a TOKEN en utilisant [email,password]'
 
-` const url = "localhost:3000/login";
+```
+  const url = "localhost:3000/login";
 	const fetchBody = new URLSearchParams();
 	fetchBody.append("data", '{"email":"'+email+' , "password"'+password+'"}');
 
@@ -485,7 +488,7 @@ Les versions déployées contiennent exactement les mêmes fonctionnalités que 
         TOKEN=res;
 	})
 	.catch(error => { console.error("An error occured") });
-`
+```
 
 ## Limites du projet 
 
